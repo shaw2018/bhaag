@@ -9,10 +9,10 @@ import logger as log
 
 
 """ Setting language """
-if config.LANGUAGE == "ru_RU":
-    from translations.ru_RU import *
-elif config.LANGUAGE == "en_EN":
+if config.LANGUAGE == "en_EN":
     from translations.en_EN import *
+elif config.LANGUAGE == "ru_RU":
+    from translations.ru_RU import *
 else:
     log.warn(
         "Unable to load translations. Make sure you have entered the correct language.")
