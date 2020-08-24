@@ -126,8 +126,8 @@ async def info_error(ctx, error):
 async def help(ctx):
     log.cmd('help', ctx.author, ctx.guild)
     prefix = get_prefix(ctx, ctx)
-    embed = discord.Embed(title='**Список команд**',
-                          description='Синтаксис команд: `[об. аргумент] <необ. аргумент>`', color=0xff5757)
+    embed = discord.Embed(title='**List of commands**',
+                          description='Command syntax: `[about. argument] <required argument>`', color=0xC36EF6)
 
     embed.set_thumbnail(
         url='https://cdn.discordapp.com/avatars/738279888674357298/0a8114760177033f90ddfa2ac9b5c93d.png?size=64')
