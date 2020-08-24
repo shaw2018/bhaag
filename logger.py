@@ -28,7 +28,7 @@ def warn(text, func='root'):
 
 def cmd(command, user, guild):
     f = open('lastest.log', 'at', encoding='UTF-8')
-    data = '{0} @{1} использовал команду "{2}" на сервере "{3}"'.format(
+    data = '{0} @{1} used the command "{2}" on the server "{3}"'.format(
         time(), user, command, guild)
     print(data)
     f.write(data + '\n')
