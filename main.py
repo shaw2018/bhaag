@@ -136,7 +136,7 @@ async def help(ctx):
         embed.add_field(
             name=help_titles[i], value=help_texts[i].format(prefix), inline=False)
 
-    await ctx.message.add_reaction(emoji='📭')
+    await ctx.message.add_reaction(emoji='🍌')
     await ctx.message.author.send(embed=embed)
 
 
