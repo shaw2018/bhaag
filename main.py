@@ -61,6 +61,13 @@ async def status_updater():
 async def on_ready():
     log.info(logged_as(bot.user))
     bot.loop.create_task(status_updater())
+    
+@bot.event
+async def on_member_join(member):
+    await member.create_dm()
+    await member.dm_channel.send(
+        f'Hi {member.name}, welcome to my Discord server!'
+    )
 
 
 @bot.command()
