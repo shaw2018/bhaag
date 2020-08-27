@@ -85,7 +85,6 @@ async def info(ctx, member: discord.Member):
     id = str(member.id)
     tag = member
     hash = member.avatar
-    status = member.status
     joined_at = member.joined_at.strftime('%d.%m.%Y')
     created_at = member.created_at.strftime('%d.%m.%Y')
     if member.bot:
@@ -95,7 +94,7 @@ async def info(ctx, member: discord.Member):
 
     embed = discord.Embed(title=about_user(),
                           description=user_info(
-        id, tag, is_bot, status, created_at, joined_at),
+        id, tag, is_bot, created_at, joined_at),
         color=0xff5757)
 
     embed.set_thumbnail(
@@ -111,7 +110,6 @@ async def info_error(ctx, error):
         id = str(ctx.message.author.id)
         tag = ctx.message.author
         hash = ctx.message.author.avatar
-        status = ctx.message.author.status
         joined_at = ctx.message.author.joined_at.strftime('%d.%m.%Y')
         created_at = ctx.message.author.created_at.strftime('%d.%m.%Y')
         if ctx.message.author.bot:
